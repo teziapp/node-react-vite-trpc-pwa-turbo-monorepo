@@ -1,5 +1,5 @@
 {
-  "name": "smartcrm-api",
+  "name": "node-react-trpc-api",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.ts",

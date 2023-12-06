@@ -1,5 +1,6 @@
 {
-  "private": true,
+  "name": "node-react-trpc-monorepo",
+  "private": false,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
