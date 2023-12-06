@@ -1,10 +1,12 @@
 import { inferAsyncReturnType, inferRouterOutputs } from "@trpc/server";
 import { CreateExpressContextOptions, createExpressMiddleware } from "@trpc/server/adapters/express";
 import { Application } from "express";
-import * as packageJson from '../../package.json';
+import packageJson from '../../package.json';
+import { authController } from "../controllers/auth.controller";
 import { publicProcedure, router } from "../trpc";
 
 export const trpcRouter = router({
+  auth: authController,
   version: publicProcedure
     .query(() => ({
       be_version: packageJson.version,

@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
+    "types": [
+      "vite-plugin-pwa/react"
+    ],
     "useDefineForClassFields": true
   },
-  "extends": "@repo/typescript-config/vite.json",
+  "extends": "config-typescript/vite.json",
   "include": ["src", "./package.json"]
 }

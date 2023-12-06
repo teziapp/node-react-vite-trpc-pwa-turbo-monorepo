@@ -1,7 +1,7 @@
 import { QueryClient } from "@tanstack/react-query";
 import { createTRPCReact, httpBatchLink, httpLink, splitLink } from "@trpc/react-query";
 import { inferRouterOutputs } from "@trpc/server";
-import { AppRouter } from '../../../api/src/trpc/router';
+import type { AppRouter } from '../../../api/src/trpc/router';
 import { be_url } from "../config";
 
 export const trpc = createTRPCReact<AppRouter>({
@@ -13,7 +13,7 @@ export type RouterOutputs = inferRouterOutputs<AppRouter>;
 const url = `${be_url}/trpc`;
 
 // queryClient & trpc Client are placed inside a state hook in case of SSR.
-export const trpcQueryClient = new QueryClient({
+export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: Infinity,

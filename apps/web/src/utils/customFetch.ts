@@ -1,0 +1,1 @@
+export const customFetch = (input: RequestInfo, init?: RequestInit) => fetch(input, init);
