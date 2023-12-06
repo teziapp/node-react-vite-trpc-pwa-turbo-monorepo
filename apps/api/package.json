@@ -1,0 +1,47 @@
+{
+  "name": "smartcrm-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "force_logout_below_frontend_version": "",
+  "force_update_below_frontend_version": "",
+  "scripts": {
+    "build": "rimraf build && tsc -p tsconfig.json",
+    "dev": "NODE_PATH=src nodemon src/server.ts",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
+    "pre-push": "yarn run lint && yarn run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "*",
+    "@types/compression": "^1.7.5",
+    "@types/cookie-parser": "^1.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.10.3",
+    "@types/ua-parser-js": "^0.7.39",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "http-status": "^1.7.3",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "ua-parser-js": "^1.0.37",
+    "winston": "^3.11.0"
+  }
+}

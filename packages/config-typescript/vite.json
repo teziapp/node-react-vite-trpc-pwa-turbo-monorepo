@@ -1,16 +1,23 @@
 {
   "extends": "./base.json",
+  "Display": "Vite",
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
+    "allowJs": false,
+    "esModuleInterop": false,
+    "jsx": "react-jsx",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "sourceMap": true,
-    "resolveJsonModule": true,
+    "moduleResolution": "Node",
     "noEmit": true,
+    "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "resolveJsonModule": true,
+    "skipLibCheck": false,
+    "sourceMap": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true
   },
+  "include": ["vite.config.ts"],
   "exclude": ["node_modules"]
 }

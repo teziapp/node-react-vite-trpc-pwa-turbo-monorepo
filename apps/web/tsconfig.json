@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "baseUrl": "src",
+    "useDefineForClassFields": true
+  },
   "extends": "@repo/typescript-config/vite.json",
-  "include": ["src"]
+  "include": ["src", "./package.json"]
 }
