@@ -27,7 +27,9 @@ const sseMessage = (input: {}) => typeof input === 'object'
   : `data: ${input}\n\n`;
 
 const writeSseMsg = (res: Response, input: {}) => {
-  res.write(sseMessage(input));
+  res.write(sseMessage(input));  
+  // Build Error: error TS2339: Property 'flush' does not exist on type 'Response<any, Record<string, any>>'.
+  // @ts-ignore 
   res.flush();
 }
 let intervalID: NodeJS.Timeout;

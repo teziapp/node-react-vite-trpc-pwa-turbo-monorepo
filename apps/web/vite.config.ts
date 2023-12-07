@@ -1,6 +1,8 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { VitePWA } from 'vite-plugin-pwa';
+// @ts-ignore
+import * as packageJson from './package.json';
 
 export default defineConfig({
   plugins: [
@@ -28,35 +30,37 @@ export default defineConfig({
       //     })
       //   ],
       manifest: {
-        "short_name": "Smart Brand",
-        "name": "Smart Brand",
-        "description": "Smart Brand is an app for Brand to manage their business end-to-end.",
+        "short_name": packageJson.pwa_short_name,
+        "name": packageJson.pwa_name,
+        "description": packageJson.pwa_description,
         "icons": [
-        {
-            "src": "favicon.ico",
-            "sizes": "48x48",
-            "type": "image/x-icon"
-        },
-        {
-            "src": "/favicon/favicon-16x16.png",
-            "sizes": "16x16",
-            "type": "image/x-icon"
-        },
-        {
-            "src": "/favicon/favicon-32x32.png",
-            "sizes": "32x32",
-            "type": "image/x-icon"
-        },
-        {
-            "src": "/favicon/android-chrome-192x192.png",
-            "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "/favicon/android-chrome-512x512.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
+          {
+            "src": "logo.svg",
+            "sizes": "any",
+            // "sizes": "16x16 32x32 48x48 72x72 96x96 128x128 192x192 256x256 512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+          },
+          // {
+          //     "src": "/favicon/favicon-16x16.png",
+          //     "sizes": "16x16",
+          //     "type": "image/x-icon"
+          // },
+          // {
+          //     "src": "/favicon/favicon-32x32.png",
+          //     "sizes": "32x32",
+          //     "type": "image/x-icon"
+          // },
+          // {
+          //     "src": "/favicon/android-chrome-192x192.png",
+          //     "type": "image/png",
+          //     "sizes": "192x192"
+          // },
+          // {
+          //     "src": "/favicon/android-chrome-512x512.png",
+          //     "type": "image/png",
+          //     "sizes": "512x512"
+          // }
         ],
         "start_url": ".",
         "display": "standalone",

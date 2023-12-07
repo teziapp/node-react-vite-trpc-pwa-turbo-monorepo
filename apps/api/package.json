@@ -6,7 +6,7 @@
   "force_logout_below_frontend_version": "",
   "force_update_below_frontend_version": "",
   "scripts": {
-    "build": "rimraf build && tsc -p tsconfig.json",
+    "build": "rm -rf dist && tsc -b",
     "dev": "NODE_PATH=src nodemon src/server.ts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",

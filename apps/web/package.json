@@ -1,12 +1,14 @@
 {
   "name": "node-react-trpc-web",
-  "private": false,
+  "private": false,  
+  "pwa_short_name": "Template",
+  "pwa_name": "Monorepo Template",
+  "pwa_description": "Template for Nodejs + tRPC + Reactjs + Vite",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "tsc -b",
-    "build": "vite build",
+    "build": "rm -rf dist && tsc -b tsconfig.json",
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.ts\""
   },

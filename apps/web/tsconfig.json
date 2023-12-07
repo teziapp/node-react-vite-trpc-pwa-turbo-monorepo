@@ -7,5 +7,4 @@
     "useDefineForClassFields": true
   },
   "extends": "config-typescript/vite.json",
-  "include": ["src", "./package.json"]
 }

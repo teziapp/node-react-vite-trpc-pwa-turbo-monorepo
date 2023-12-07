@@ -1,6 +1,5 @@
-import { Theme } from 'react-toastify';
-import { pxToRem, responsiveFontSizes } from '../utils/getFontValue';
 import { ThemeOptions } from '@mui/material';
+import { pxToRem, responsiveFontSizes } from '../utils/getFontValue';
 
 // ----------------------------------------------------------------------
 

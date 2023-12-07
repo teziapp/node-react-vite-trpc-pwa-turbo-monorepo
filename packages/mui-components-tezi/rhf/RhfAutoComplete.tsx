@@ -131,7 +131,7 @@ export const AutoCompleteStringNumberRhfMui = <TFieldValues extends FieldValues>
               }
               loading={isLoading}
               multiple={multiple}
-              onChange={(event, value, reason, details) => {
+              onChange={(_event, value, _reason, _details) => {
                   if (!value) return onChange(value);
                   
                   let newValue;
@@ -162,7 +162,7 @@ export const AutoCompleteStringNumberRhfMui = <TFieldValues extends FieldValues>
               }
               renderOption={renderOption
                 ? renderOption
-                : (props, option, state, ownerState) => (
+                : (props, option, state, _ownerState) => (
                   <li {...props}>
                     {multiple && <Checkbox sx={{ mr: 1}} checked={state.selected} />}
                     {newGetOptionLabel(option)}
